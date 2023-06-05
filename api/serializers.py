@@ -1,12 +1,14 @@
 from rest_framework import serializers
-from .models import Bank, Branch
+from .models import Banks, Branches
+
 
 class BankSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Bank
-        fields = '__all__'
+        model = Banks
+        fields = ['name', 'id']
+
 
 class BranchSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Branch
-        fields = '__all__'
+        model = Branches
+        fields = ['ifsc', 'bank_id', 'branch', 'address', 'city', 'district', 'state']
