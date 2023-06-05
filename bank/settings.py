@@ -30,7 +30,6 @@ INSTALLED_APPS = [
     'api',
     'rest_framework',
     'rest_framework.authtoken',
-    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +60,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'bank.wsgi.application'
+WSGI_APPLICATION = 'bank.wsgi.app'
+
 
 
 # Database
