@@ -13,6 +13,4 @@ router.register('branches', BranchViewSet, basename="branches")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    # path('import', import_data, name='import_data'),
-
 ]
