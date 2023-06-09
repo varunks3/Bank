@@ -1,5 +1,3 @@
-from django.conf import settings
-from django.db import connection
 from pathlib import Path
 import os
 
@@ -15,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--(y%^a-3wdy)7m*^@#us2_(9+^=f0^idmzhpj_x2awh-le$re3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,39 +75,17 @@ WSGI_APPLICATION = 'bank.wsgi.app'
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': os.environ.get("DB_NAME"),
-#         'USER': os.environ.get("DB_USER"),
-#         'PASSWORD': os.environ.get("DB_PASSWORD"),
-#         'HOST': os.environ.get("DB_HOST"),
-#         'PORT': os.environ.get("DB_PORT"),
-#     }
-# }
 
-# from decouple import config
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Change this if you're using a different database backend
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD'),
-#         'HOST': config('DB_HOST'),
-#         'PORT': config('DB_PORT'),
-#     }
-# }
 
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": 'Bank',
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": 'postgres',
         "USER": 'postgres',
-        "PASSWORD": 'Sv@sP4evR',
-        "HOST": 'localhost',
-        "PORT": '5432',
+        "PASSWORD": 'Sv@sP4evR@123',
+        "HOST": '13.232.195.177',
+        "PORT": '6543',
     }
 }
 
